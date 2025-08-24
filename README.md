@@ -1,4 +1,4 @@
-# 🏠 StreamMatch - Roommate Matching App
+# 🏠 Homies - Roommate Matching App
 
 > **Find your perfect roommate based on lifestyle preferences and home aesthetic vision**
 
