@@ -40,11 +40,16 @@ export default function AuthPage() {
           return;
         }
       } else {
-        const { error } = await supabase.auth.signInWithPassword({
+        const { data, error } = await supabase.auth.signInWithPassword({
           email,
           password,
         });
         if (error) throw error;
+        
+        // Add this: Redirect to profile after successful sign-in
+        if (data.user) {
+          router.push('/profile');
+        }
       }
     } catch (error: any) {
       setError(error.message);

@@ -53,6 +53,23 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }
 
+  // After successful authentication
+  const signIn = async (email: string, password: string) => {
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+      
+      if (data.user) {
+        // Redirect to profile instead of home
+        router.push('/profile');
+      }
+    } catch (error) {
+      // handle error
+    }
+  };
+
   return (
     <AuthContext.Provider value={{ user, loading, signOut }}>
       {children}
