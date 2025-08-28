@@ -6,15 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "create-fake-profiles": "tsx scripts/create-fake-profiles.ts"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.9.0",
     "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.56.0",
     "@types/js-cookie": "^3.0.6",
+    "dotenv": "^17.2.1",
     "js-cookie": "^3.0.5",
     "next": "15.5.0",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "tsx": "^4.20.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
